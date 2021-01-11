@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using View;
 
-namespace Model
+namespace Texto.Model
 {
-    public static class Base
+    class Base
     {
         /// <summary>
         /// Path to directory, where located info about present step
@@ -18,7 +17,7 @@ namespace Model
 
         public static void SendPathToVisualizer()
         {
-            Visualizer.Visualize(path.ToString(), error.Text);
+            View.Visualizer.Visualize(path.ToString(), error.Text);
         }
     }
 }

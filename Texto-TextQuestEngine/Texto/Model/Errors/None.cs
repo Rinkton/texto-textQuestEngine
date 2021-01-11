@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model;
 
-namespace Controller
+namespace Texto.Model.Errors
 {
-    public class Class1
+    class None : Error
     {
+        public None()
+        {
+            Text = null;
+        }
     }
 }

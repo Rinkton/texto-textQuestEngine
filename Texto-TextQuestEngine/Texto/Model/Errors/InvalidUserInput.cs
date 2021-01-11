@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model;
 
-namespace Start
+namespace Texto.Model.Errors
 {
-    class Program
+    class InvalidUserInput : Error
     {
-        static void Main(string[] args)
+        public InvalidUserInput()
         {
-            Base.SendPathToVisualizer();
+            Text = "There is must be an error text.";
         }
     }
 }

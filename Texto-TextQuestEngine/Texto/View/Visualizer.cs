@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Errors
+namespace Texto.View
 {
-    class None : Error
+    public static class Visualizer
     {
-        public None()
+        public static void Visualize(string path, string errorText)
         {
-            Text = null;
+
         }
     }
 }
