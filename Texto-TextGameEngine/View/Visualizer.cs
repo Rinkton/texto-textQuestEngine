@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model;
+using Controller;
 
-namespace Start
+namespace View
 {
-    class Program
+    public static class Visualizer
     {
-        static void Main(string[] args)
+        public static void Visualize(string path, string errorText)
         {
-            Base.SendPathToVisualizer();
+
         }
     }
 }
