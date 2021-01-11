@@ -11,6 +11,8 @@ namespace Model
         static void Main(string[] args)
         {
             Base.SendPathToVisualizer();
+            string userInput = Controller.Input.GetUserInput();
+            Base.ValidateUserInput(userInput);
         }
     }
 }
