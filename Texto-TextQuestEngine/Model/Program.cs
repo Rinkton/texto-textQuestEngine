@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Texto.Model.Errors
+namespace Model
 {
-    class None : Error
+    class Program
     {
-        public None()
+        static void Main(string[] args)
         {
-            Text = null;
+            Base.SendPathToVisualizer();
         }
     }
 }

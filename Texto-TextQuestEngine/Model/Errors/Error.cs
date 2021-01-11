@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Texto.Model.Errors
+namespace Model.Errors
 {
     public abstract class Error
     {

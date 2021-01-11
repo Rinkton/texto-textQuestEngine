@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Texto.Model.Errors
+namespace View
 {
-    class InvalidUserInput : Error
+    public static class Visualizer
     {
-        public InvalidUserInput()
+        public static void Visualize(string path, string errorText)
         {
-            Text = "There is must be an error text.";
+
         }
     }
 }
