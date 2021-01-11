@@ -1,0 +1,15 @@
+Definitions:
+	Step - Moment in the game, when is displaying moment's description and variants of choice.
+
+It's a text-quest engine.
+
+To create a main quest file you need to create folder with name "quest".
+	Then, there is, in this folder you can to CREATE.
+So, you may to create there a .txt file with random name ("#" for example).
+	In this file you should to write what text will display when player is reach this step in quest, description of step.
+Create folders and name them like a descriptions of choice's variant.
+	But variants is being displayed in sequense, that defined by sorter.
+And now you can describe in folders-variant choices next steps. (So, this is going around)
+Folder without variants it's end of the quest.
+
+If you wanna test it, then put "quest"-folder with .exe file of program and start a program and all is will working.
