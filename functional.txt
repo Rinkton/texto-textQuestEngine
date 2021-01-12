@@ -9,6 +9,7 @@ So, you may to create there a .txt file with random name ("#" for example).
 	In this file you should to write what text will display when player is reach this step in quest, description of step.
 Create folders and name them like a descriptions of choice's variant.
 	But variants is being displayed in sequense, that defined by sorter.
+	If you want to create variant, that link to step, which already exist you can use shortcut to folder.
 And now you can describe in folders-variant choices next steps. (So, this is going around)
 Folder without variants it's end of the quest.
 

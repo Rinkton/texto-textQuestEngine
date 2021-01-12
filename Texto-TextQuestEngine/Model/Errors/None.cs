@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Errors
 {
-    class None : Error
+    public class None : Error
     {
         public None()
         {

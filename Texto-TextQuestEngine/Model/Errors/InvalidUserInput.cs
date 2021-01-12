@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Errors
 {
-    class InvalidUserInput : Error
+    public class InvalidUserInput : Error
     {
         public InvalidUserInput()
         {

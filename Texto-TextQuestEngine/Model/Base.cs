@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Model
 {
-    class Base
+    public class Base
     {
         /// <summary>
         /// Path to directory, where located info about present step
