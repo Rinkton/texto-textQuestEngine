@@ -8,11 +8,37 @@ namespace Model
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Base.SendPathToVisualizer();
-            string userInput = Controller.Input.GetUserInput();
-            Base.ValidateUserInput(userInput);
+            while (true)
+            {
+                Base.SendPathToVisualizer();
+
+                //If there is no variants, then game is ended
+                if (Base.GetVariantsCount() == 0)
+                {
+                    Controller.Input.WaitUserKey();
+                    break;
+                }
+
+                string userInput = Controller.Input.GetUserInput();
+                Errors.Error err = Base.ValidateUserInput(userInput);
+
+                if (err.GetType() != new Errors.None().GetType())
+                {
+                    Base.Error = err;
+                    continue;
+                }
+                else
+                {
+                    Base.Error = new Errors.None();
+                }
+
+                //userInput 100% is correct number, cuz it's been validated
+                int userInputInt = Convert.ToInt32(userInput);
+                string newPathString = Base.GetNewPath(userInputInt);
+                Base.Path = new StringBuilder(newPathString);
+            }
         }
     }
 }

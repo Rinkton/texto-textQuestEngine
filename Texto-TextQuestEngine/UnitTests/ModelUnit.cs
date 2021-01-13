@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Model;
 
 namespace UnitTests
 {
@@ -12,37 +13,51 @@ namespace UnitTests
         [Fact]
         public void ValidateUserInputUnit()
         {
-            // Arrange
-
-            // Act
-            bool allIsOK = true;
-
-            #region check correct variants
-            string[] testValuesCorrect = new string[] { "1", "2" };
-
-            foreach (string value in testValuesCorrect)
+            Type[] expectedValues = new Type[]
             {
-                if (Model.Base.ValidateUserInput(value).GetType() == new Model.Errors.InvalidUserInput().GetType())
-                {
-                    allIsOK = false;
-                }
-            }
-            #endregion
+                new Model.Errors.None().GetType(),
+                new Model.Errors.None().GetType(),
+                new Model.Errors.InvalidUserInput().GetType(),
+                new Model.Errors.InvalidUserInput().GetType(),
+                new Model.Errors.InvalidUserInput().GetType(),
+                new Model.Errors.InvalidUserInput().GetType(),
+                new Model.Errors.None().GetType(),
+                new Model.Errors.InvalidUserInput().GetType()
+            };
 
-            #region check incorrect variants
-            string[] testValuesIncorrect = new string[] { "abc", "1a", "a1", "0", "3", "100" };
-
-            foreach (string value in testValuesIncorrect)
+            Type[] actualValues = new Type[]
             {
-                if (Model.Base.ValidateUserInput(value).GetType() == new Model.Errors.None().GetType())
-                {
-                    allIsOK = false;
-                }
-            }
-            #endregion
+                Base.ValidateUserInput("1").GetType(),
+                Base.ValidateUserInput("2").GetType(),
+                Base.ValidateUserInput("abc").GetType(),
+                Base.ValidateUserInput("1a").GetType(),
+                Base.ValidateUserInput("a1").GetType(),
+                Base.ValidateUserInput("0").GetType(),
+                Base.ValidateUserInput("3").GetType(),
+                Base.ValidateUserInput("100").GetType()
+            };
 
-            // Assert
-            Assert.True(allIsOK);
+            Assert.Equal(expectedValues, actualValues);
+        }
+
+        [Fact]
+        public void GetNewPath()
+        {
+            string[] expectedNewPaths = new string[]
+            {
+                @"quest\without description",
+                @"quest\without variants",
+                @"quest\without description\1"
+            };
+
+            string[] actualNewPaths = new string[]
+            {
+                Base.GetNewPath(1),
+                Base.GetNewPath(2),
+                Base.GetNewPath(3)
+            };
+
+            Assert.Equal(expectedNewPaths, actualNewPaths);
         }
     }
 }

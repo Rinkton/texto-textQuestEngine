@@ -62,12 +62,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonUnit.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ModelUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewUnit.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c61bf13c-42d4-4568-9d32-161ae79c6bad}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Controller\Controller.csproj">
       <Project>{04dc851e-cf20-44f9-828d-041950b290ef}</Project>
       <Name>Controller</Name>

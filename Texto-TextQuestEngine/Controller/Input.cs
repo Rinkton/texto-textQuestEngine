@@ -16,5 +16,13 @@ namespace Controller
             string userInput = Console.ReadLine();
             return userInput;
         }
+
+        /// <summary>
+        /// Wait until user click some key on keyboard
+        /// </summary>
+        public static void WaitUserKey()
+        {
+            Console.ReadKey();
+        }
     }
 }

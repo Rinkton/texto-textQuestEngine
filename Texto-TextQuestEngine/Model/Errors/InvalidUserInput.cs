@@ -10,7 +10,7 @@ namespace Model.Errors
     {
         public InvalidUserInput()
         {
-            Text = "There is must be an error text.";
+            Text = "Invalid user input! Please, enter a number of variant, that you want to choose.";
         }
     }
 }
