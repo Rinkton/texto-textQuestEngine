@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+    //TODO: Check of line break's validate, because line break may be diffirent, it dependences from editor of text
+    //TODO: Split classes on smaller classes, it are so huge
+    //TODO: Write samples
     class Program
     {
         static void Main()
