@@ -38,7 +38,19 @@ namespace View
 
         internal static string getDescription(string path)
         {
-            return getTxtFileName(path);
+            string descriptionName = getTxtFileName(path);
+
+            if (descriptionName == null)
+            {
+                return null;
+            }
+
+            string pathToDescription = IOFunctions.AddThisToPath(path, descriptionName, "txt");
+
+            StreamReader sr = new StreamReader(pathToDescription);
+            string description = sr.ReadToEnd();
+
+            return description;
         }
 
         private static string getTxtFileName(string path)
