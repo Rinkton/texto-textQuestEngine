@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    //TODO: Check of line break's validate, because line break may be diffirent, it dependences from editor of text
     //TODO: Split classes on smaller classes, it are so huge
     //TODO: Write samples
-	//TODO: Fix up a bug, when shortcut link on a empty folder (and shortcuts don't work at all)
-	//TODO: In variants user creator don't can to write "?"
     class Program
     {
         static void Main()

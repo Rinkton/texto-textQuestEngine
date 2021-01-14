@@ -15,9 +15,9 @@ namespace UnitTests
         {
             string[] expectedDescriptions = new string[]
             {
-                "#",
+                "Description in \"quest\"",
                 null,
-                "321"
+                "Description in \"without variants\""
             };
 
             string[] actualDescriptions = new string[]

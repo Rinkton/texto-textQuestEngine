@@ -115,7 +115,7 @@ namespace Model
             }
             else
             {
-                parentFolder = path.Take(parentFolderLength).ToString();
+                parentFolder = path.Substring(0, parentFolderLength);
             }
 
             string relativeLink = getRelativePath(link.TargetPath, parentFolder);

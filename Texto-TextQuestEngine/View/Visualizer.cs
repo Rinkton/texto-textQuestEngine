@@ -90,7 +90,10 @@ namespace View
 
             for (int i = 1; i < variants.Length+1; i++)
             {
-                Console.WriteLine(i + ". " + variants[i - 1]);
+                //User do not can use "?" symbol in name of folders, then, in this program it stands for "#q"
+                string handledVariant = variants[i - 1].Replace("#q", "?");
+
+                Console.WriteLine(i + ". " + handledVariant);
             }
         }
         #endregion
